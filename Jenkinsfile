@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Clone repository') {
             steps {
-                git 'https://github.com/GeovanyArdon/Linux.git'
+                git branch: 'main', url: 'https://github.com/GeovanyArdon/Linux.git'
             }
         }
 
@@ -17,13 +17,11 @@ pipeline {
         stage('Deploy to AWS') {
             steps {
                 echo 'Deploying to AWS...'
-                // Aquí puedes agregar los comandos de despliegue necesarios para tu infraestructura
-                // Por ejemplo, si usas AWS CLI:
-                // sh 'aws s3 cp my-app.zip s3://my-bucket'
+                // Aquí puedes agregar los comandos de despliegue necesarios
             }
         }
     }
-    
+
     post {
         success {
             echo 'Pipeline executed successfully!'
