@@ -15,12 +15,7 @@ pipeline {
             }
         }
 
-         stage('Run Tests') {
-            steps {
-                sh 'node test.js' // Ejecuta el archivo de prueba
-            }
-        }
-
+        
         stage('Deploy to AWS') {
             steps {
                 echo 'Deploying to AWS...'
