@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t geovanyardon/dockerepo:v1 -f Dockerfile .'
-                sh 'exit 1'  // Esto forzará que la etapa falle.
+                // sh 'exit 1'  // Esto forzará que la etapa falle.
             }
         }
 
