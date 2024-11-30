@@ -15,6 +15,13 @@ pipeline {
             }
         }
 
+        stage('Ejecutar Script de Verificación') {
+            steps {
+                // Ejecutar el archivo test.js
+                sh 'node test.js'
+            }
+        }
+
 
         
         stage('Deploy to AWS') {
