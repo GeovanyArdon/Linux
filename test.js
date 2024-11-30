@@ -1,6 +1,10 @@
-function verificarNumero(numero) {
-    if (numero !== 11) {
-      throw new Error("El número no es 10. El programa se detiene.");
-    }
-    console.log("El número es 10, el programa continúa.");
-  }
+// test.js
+
+const numero = 5; // Puedes cambiar este valor para probar el error
+
+if (numero !== 10) {
+    console.error(`¡Error! El número no es 10. El valor es ${numero}.`);
+    process.exit(1); // Salir con un código de error
+}
+
+console.log("El número es 10.");
