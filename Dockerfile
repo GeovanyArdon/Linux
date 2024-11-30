@@ -9,7 +9,7 @@ COPY index.html .
 COPY style.css .
 
 # Exponer el puerto 80 para acceder al sitio web
-EXPOSE 3000
+EXPOSE 80
 
 # Comando para iniciar el servidor Nginx
 CMD ["nginx", "-g", "daemon off;"]
