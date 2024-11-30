@@ -11,12 +11,12 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t geovanyardon/dockerepo:v1 -f Dockerfile .'
-                // sh 'exit 1'  // Esto forzará que la etapa falle.
+    
             }
         }
 
         
-        stage('Deploy to AWS') {
+        stage('Deploy to AWS') {c
             steps {
                 echo 'Deploying to AWS...'
                 // Aquí puedes agregar los comandos de despliegue necesarios
