@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                docker.build('geovanyardon/dockerepo:v1', '-f Dockerfile .')
+                sh 'docker build -t geovanyardon/dockerepo:v1 -f Dockerfile .'
     
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy to AWS') {
             steps {
                 echo 'Deploying to AWS...'
-    
+                // Aquí puedes agregar los comandos de despliegue necesarios
             }
         }
     }
