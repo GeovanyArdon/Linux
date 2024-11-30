@@ -1,16 +1,6 @@
-function validateNumber() {
-    const userInput = document.getElementById('inputNumber').value;  // Obtener el número del HTML
-    const messageElement = document.getElementById('message');
-
-    // Validación del número
-    if (userInput != 10) {
-        messageElement.textContent = "¡Error! Debes ingresar el número 10.";
-        messageElement.style.color = "red";
-        
-        // Lanzar un error para que Jenkins lo detecte
-        throw new Error("El número ingresado no es 10.");
-    } else {
-        messageElement.textContent = "¡Número correcto!";
-        messageElement.style.color = "green";
+function verificarNumero(numero) {
+    if (numero !== 10) {
+      throw new Error("El número no es 10. El programa se detiene.");
     }
-}
+    console.log("El número es 10, el programa continúa.");
+  }

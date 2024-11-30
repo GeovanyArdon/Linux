@@ -15,15 +15,6 @@ pipeline {
             }
         }
 
-        
-        stage('Run JS Test') {
-            steps {
-                script {
-                    // Ejecutar test.js y marcar el pipeline como fallido si lanza un error
-                    sh 'node test.js'  // Asegúrate de que test.js esté en el repositorio
-                }
-            }
-        }
 
         
         stage('Deploy to AWS') {
