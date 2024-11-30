@@ -16,7 +16,7 @@ pipeline {
         }
 
         
-        stage('Deploy to AWS') {c
+        stage('Deploy to AWS') {
             steps {
                 echo 'Deploying to AWS...'
                 // Aquí puedes agregar los comandos de despliegue necesarios
