@@ -15,10 +15,17 @@ pipeline {
             }
         }
 
-        stage('Ejecutar Script de Verificación') {
+        stage('Run JS Test') {
             steps {
-                // Ejecutar el archivo test.js
-                sh 'node test.js'
+                script {
+                    // Ejecutar test.js y fallar el pipeline si el número no es 10
+                    def result = sh(script: 'node test.js', returnStatus: true)
+
+                    // Si el código de salida es distinto de 0, el test falló
+                    if (result != 0) {
+                        error "Test failed: El número no es 10."
+                    }
+                }
             }
         }
 
