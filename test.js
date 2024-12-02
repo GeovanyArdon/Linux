@@ -1,10 +1,10 @@
 // test.js
-document.getElementById('numeroForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita la recarga de la página
+//document.getElementById('numeroForm').addEventListener('submit', function(event) {
+//    event.preventDefault(); // Evita la recarga de la página
     
-    const numeros = document.getElementById('numero').value;
+//    const numeros = document.getElementById('numero').value;
 
-});
+//});
 
 const numero = 10; // Puedes cambiar este valor para probar el error
 
