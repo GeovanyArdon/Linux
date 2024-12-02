@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Bonita</title>
+    <title>Tienda Web</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Barra de navegación -->
@@ -24,7 +26,7 @@
     <section class="hero">
         <div class="hero-text">
             <h1>Bienvenidos a Mi Página Web</h1>
-            <p>Diseño elegante y sencillo para mostrar contenido importante.</p>
+            <p>Diseño elegante y sencillo.</p>
         </div>
     </section>
 
@@ -32,11 +34,11 @@
     <section class="content">
         <div class="container">
             <div class="card">
-                <h2>Sobre mí</h2>
+                <h2>Mercaderia</h2>
                 <p>Un breve párrafo sobre mí, lo que hago y mis pasiones.</p>
             </div>
             <div class="card">
-                <h2>Servicios</h2>
+                <h2>Inventario</h2>
                 <p>Descripción de los servicios que ofrezco, como desarrollo web, diseño gráfico, etc.</p>
             </div>
             <div class="card">
@@ -44,9 +46,21 @@
                 <p>Cómo puedes contactarme por correo electrónico o a través de redes sociales.</p>
             </div>
         </div>
+
+        <div class="camisas">
+            <h1>Ingresa el numero de camisas (9 en stock)</h1>
+            <form id="numeroForm">
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" min="1" max="10" required>
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+
+        <script src="test.js"></script>
     </section>
 
- 
+
 
     <!-- Pie de página -->
     <footer>
@@ -54,4 +68,5 @@
     </footer>
 
 </body>
+
 </html>
