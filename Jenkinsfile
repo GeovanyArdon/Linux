@@ -48,17 +48,6 @@ pipeline {
                 echo "Imagen subida correctamente."
             }
 
-            echo "Deteniendo y eliminando contenedor anterior (si existe)..."
-            sh '''
-            # Verificar si ya hay un contenedor corriendo con el puerto 3002
-            CONTAINER_ID=$(docker ps -q -f "publish=3002")
-            if [ -n "$CONTAINER_ID" ]; then
-                echo "Deteniendo el contenedor con puerto 3002..."
-                docker stop $CONTAINER_ID
-                docker rm $CONTAINER_ID
-            fi
-            '''
-
             echo "Descargando e iniciando contenedor desde Docker Hub..."
             sh 'docker pull geovanyardon/dockerepo:v1'
             //sh 'docker run -d -p 80:80 geovanyardon/dockerepo:v1'
