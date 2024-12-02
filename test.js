@@ -4,7 +4,7 @@ document.getElementById('numeroForm').addEventListener('submit', function(event)
     
     const numero = document.getElementById('numero').value;
 
-numero = 10; // Puedes cambiar este valor para probar el error
+numero = 11; // Puedes cambiar este valor para probar el error
 
 if (numero !== 10) {
     console.error(`¡Error! El número no es 10. El valor es ${numero}.`);
@@ -12,3 +12,5 @@ if (numero !== 10) {
 }
 
 console.log("El número es 10.");
+
+});
